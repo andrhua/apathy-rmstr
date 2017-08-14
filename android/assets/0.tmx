@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="430" height="100" tilewidth="32" tileheight="32" backgroundcolor="#ffaaff" nextobjectid="459">
+ <objectgroup color="#ff00ff" name="background">
+  <object id="290" x="8989" y="2174.67" width="188" height="576"/>
+  <object id="338" x="9982.34" y="2780" width="960" height="385.333"/>
+ </objectgroup>
+ <objectgroup name="platform">
+  <properties>
+   <property name="directionX" value="0"/>
+   <property name="directionY" value="0"/>
+   <property name="timePushing" value="0"/>
+  </properties>
+  <object id="1" x="16" y="2025" width="31" height="298"/>
+  <object id="2" x="47" y="2291" width="608" height="33"/>
+  <object id="3" x="815" y="2293" width="288" height="31"/>
+  <object id="4" x="880" y="2261" width="31" height="31"/>
+  <object id="5" x="911" y="2196" width="33" height="64"/>
+  <object id="6" x="944" y="2133" width="30" height="62"/>
+  <object id="7" x="1038" y="2132" width="32" height="158"/>
+  <object id="8" x="1232" y="2228" width="190" height="31"/>
+  <object id="9" x="1489" y="2262" width="220" height="31"/>
+  <object id="10" x="1711" y="2262" width="384" height="256">
+   <properties>
+    <property name="direction" value="right"/>
+    <property name="isTriangle" value="true"/>
+   </properties>
+   <polygon points="0,0 384,-257 383,0"/>
+  </object>
+  <object id="11" x="2096" y="2004" width="191" height="32"/>
+  <object id="12" x="2287" y="2195" width="385" height="34"/>
+  <object id="13" x="2769" y="2131" width="318" height="33"/>
+  <object id="14" x="3280" y="2099" width="126" height="36"/>
+  <object id="15" x="3566" y="2165" width="285" height="33"/>
+  <object id="16" x="3982" y="2227" width="94" height="32"/>
+  <object id="17" x="4176" y="2226" width="253" height="32"/>
+  <object id="18" x="4271.67" y="2178.75" width="64" height="46.5833"/>
+  <object id="19" x="4336" y="2036.33" width="94" height="186.667"/>
+  <object id="20" x="4516" y="2226" width="384" height="32"/>
+  <object id="21" x="4752" y="2068" width="65" height="32"/>
+  <object id="22" x="4928" y="2067" width="61" height="30"/>
+  <object id="23" x="5038" y="2226" width="768" height="416">
+   <properties>
+    <property name="direction" value="right"/>
+    <property name="isTriangle" value="true"/>
+   </properties>
+   <polygon points="0,0 768,-414 768,0"/>
+  </object>
+  <object id="24" x="5807" y="1812" width="126" height="412"/>
+  <object id="25" x="6360" y="592" width="6240" height="30"/>
+  <object id="26" x="4207" y="2211" width="31" height="14"/>
+  <object id="27" x="3918" y="2643" width="66" height="33"/>
+  <object id="28" x="3983" y="3030" width="63" height="28"/>
+  <object id="29" x="4048" y="2996" width="30" height="33"/>
+  <object id="30" x="4079" y="2964" width="30" height="33"/>
+  <object id="31" x="4112" y="2931" width="30" height="33"/>
+  <object id="32" x="4143" y="2899" width="30" height="33"/>
+  <object id="33" x="4403" y="2963" width="30" height="33"/>
+  <object id="34" x="4339" y="3028" width="30" height="33"/>
+  <object id="35" x="4434" y="2931" width="30" height="33"/>
+  <object id="36" x="4370" y="2996" width="30" height="33"/>
+  <object id="37" x="4529" y="2834" width="30" height="33"/>
+  <object id="38" x="4465" y="2899" width="30" height="33"/>
+  <object id="39" x="4560" y="2802" width="30" height="33"/>
+  <object id="40" x="4496" y="2867" width="30" height="33"/>
+  <object id="41" x="4624" y="2704" width="30" height="33"/>
+  <object id="42" x="4686" y="2640" width="30" height="33"/>
+  <object id="43" x="4717" y="2608" width="30" height="33"/>
+  <object id="44" x="4781" y="2543" width="30" height="33"/>
+  <object id="45" x="4560" y="2769" width="30" height="33"/>
+  <object id="46" x="4655" y="2672" width="30" height="33"/>
+  <object id="47" x="4591" y="2737" width="30" height="33"/>
+  <object id="48" x="4750" y="2575" width="30" height="33"/>
+  <object id="49" x="4782" y="2506" width="30" height="33"/>
+  <object id="50" x="4844" y="2442" width="30" height="33"/>
+  <object id="51" x="4875" y="2410" width="30" height="33"/>
+  <object id="52" x="4939" y="2345" width="30" height="33"/>
+  <object id="53" x="4718" y="2571" width="30" height="33"/>
+  <object id="54" x="4813" y="2474" width="30" height="33"/>
+  <object id="55" x="4749" y="2539" width="30" height="33"/>
+  <object id="56" x="4908" y="2377" width="30" height="33"/>
+  <object id="57" x="4976" y="2309" width="31" height="38"/>
+  <object id="128" x="10648" y="520" width="158" height="68"/>
+  <object id="130" x="10746" y="452" width="154" height="66"/>
+  <object id="154" x="12474" y="560" width="30" height="30"/>
+  <object id="155" x="12505" y="527" width="31" height="63"/>
+  <object id="156" x="12538" y="496" width="30" height="95"/>
+  <object id="157" x="12569" y="464" width="31" height="126"/>
+  <object id="161" x="12473" y="368" width="31" height="53"/>
+  <object id="162" x="12505" y="368" width="32" height="22"/>
+  <object id="163" x="12506" y="334" width="159" height="32"/>
+  <object id="164" x="12634" y="367" width="31" height="95"/>
+  <object id="165" x="12667" y="430" width="349" height="32"/>
+  <object id="166" x="13018" y="430" width="31" height="161"/>
+  <object id="173" x="12406.1" y="1327.73" width="702.667" height="30"/>
+  <object id="184" x="92.2" y="1777.12" width="254" height="26"/>
+  <object id="185" x="93.5" y="1297.12" width="32" height="480.667"/>
+  <object id="186" x="317.5" y="1293.79" width="32.6667" height="482"/>
+  <object id="199" x="7390.58" y="2752" width="3549.09" height="28"/>
+  <object id="200" x="7289.51" y="2087.18" width="96.9697" height="696.818"/>
+  <object id="201" x="7549" y="2720" width="382" height="30"/>
+  <object id="202" x="7581" y="2687" width="349" height="31"/>
+  <object id="203" x="7613" y="2655" width="318" height="29"/>
+  <object id="204" x="7645" y="2625" width="286" height="27"/>
+  <object id="205" x="7710" y="2529" width="412" height="93"/>
+  <object id="208" x="7772" y="2382" width="257" height="33"/>
+  <object id="209" x="7805" y="2351" width="223" height="29"/>
+  <object id="210" x="8189.33" y="2400.33" width="31" height="253"/>
+  <object id="211" x="7836" y="2318" width="192" height="33"/>
+  <object id="213" x="7868" y="2287" width="160" height="30"/>
+  <object id="214" x="7900" y="2256" width="128" height="29"/>
+  <object id="215" x="7932" y="2221" width="96" height="32"/>
+  <object id="216" x="7964" y="2189" width="63" height="30"/>
+  <object id="218" x="8220.67" y="2400.33" width="96" height="30.6667"/>
+  <object id="219" x="8285.33" y="2188.67" width="30.6667" height="211"/>
+  <object id="220" x="7995.67" y="2156" width="896" height="32"/>
+  <object id="224" x="8475.67" y="2398.67" width="384" height="30.6667"/>
+  <object id="225" x="8861" y="2396" width="29" height="356"/>
+  <object id="232" x="8541" y="2189.33" width="30.6667" height="100"/>
+  <object id="236" x="8668" y="2188" width="63" height="101"/>
+  <object id="237" x="8732" y="2188" width="30" height="101"/>
+  <object id="238" x="8763" y="2190" width="32" height="98"/>
+  <object id="239" x="8797" y="2190" width="31" height="97"/>
+  <object id="245" x="9392.67" y="2703.67" width="32" height="47.3333"/>
+  <object id="246" x="9399" y="2528" width="32" height="50"/>
+  <object id="248" x="9493" y="2624.15" width="97" height="31"/>
+  <object id="252" x="9636.73" y="2622.82" width="254.939" height="31"/>
+  <object id="259" x="9922.33" y="2622.5" width="153.333" height="33"/>
+  <object id="262" x="10112" y="2558.67" width="31.3333" height="31.3333"/>
+  <object id="263" x="10203.7" y="2465.33" width="255" height="30.6667"/>
+  <object id="265" x="9981" y="2333.33" width="957.333" height="32"/>
+  <object id="268" x="10843.5" y="2463" width="94.5" height="34"/>
+  <object id="270" x="10845" y="2656" width="62.6667" height="29.3333"/>
+  <object id="271" x="10877" y="2621.33" width="61.3333" height="32"/>
+  <object id="277" x="9274.33" y="2205.33" width="544" height="32"/>
+  <object id="282" x="9114.67" y="2462.66" width="61.3333" height="30.6667"/>
+  <object id="283" x="9211.67" y="2334.67" width="62.6667" height="32"/>
+  <object id="297" x="9739.67" y="2174.67" width="96" height="29.3333"/>
+  <object id="298" x="9804.5" y="2144.5" width="32" height="29.3333"/>
+  <object id="300" x="9628" y="2026.17" width="32" height="63"/>
+  <object id="301" x="9661" y="2027.17" width="63" height="13.5"/>
+  <object id="302" x="9661" y="2041.17" width="95.5" height="32.1667"/>
+  <object id="306" x="9659.67" y="2189.33" width="30.6667" height="16"/>
+  <object id="307" x="10074.3" y="2301.33" width="32" height="30.6667"/>
+  <object id="309" x="10172.3" y="2175.33" width="30.6667" height="65.3333"/>
+  <object id="310" x="10206.3" y="2157.33" width="32" height="64"/>
+  <object id="311" x="10299.7" y="2304" width="30.6667" height="28"/>
+  <object id="312" x="10331.7" y="2270.67" width="30.6667" height="30.6667"/>
+  <object id="313" x="10363.7" y="2238.67" width="30.6667" height="30.6667"/>
+  <object id="314" x="10395.7" y="2208" width="30.6667" height="29.3333"/>
+  <object id="315" x="10523.7" y="2204" width="30.6667" height="33.3333"/>
+  <object id="316" x="10682.3" y="2206.67" width="32" height="32"/>
+  <object id="317" x="10619.7" y="2304" width="29.3333" height="28"/>
+  <object id="318" x="10908" y="2207" width="32" height="30.6667"/>
+  <object id="319" x="10826.3" y="2302.67" width="30.6667" height="30.6667"/>
+  <object id="320" x="11068.8" y="2270.83" width="64" height="512"/>
+  <object id="321" x="11131.7" y="2434" width="64" height="349.333"/>
+  <object id="323" x="11196.5" y="2720.17" width="63.5" height="62.6667"/>
+  <object id="324" x="10939.7" y="2784" width="864.833" height="31.5"/>
+  <object id="325" x="11708.5" y="2780" width="32" height="30.5"/>
+  <object id="327" x="11995.7" y="2782.67" width="64.6667" height="127.333"/>
+  <object id="328" x="12061" y="2654.67" width="126.667" height="255.333"/>
+  <object id="329" x="12111" y="2651.33" width="24.6667" height="24.6667"/>
+  <object id="330" x="12251.7" y="2495.33" width="160" height="32"/>
+  <object id="331" x="12187.7" y="2688" width="32.6667" height="223.333"/>
+  <object id="332" x="12300.3" y="2623.33" width="128.667" height="33.3333"/>
+  <object id="334" x="8956" y="1822" width="32" height="832"/>
+  <object id="335" x="9052" y="2719" width="64" height="32"/>
+  <object id="336" x="9019" y="2496" width="896" height="30"/>
+  <object id="349" x="9917" y="2335" width="62" height="160"/>
+  <object id="363" x="10747.5" y="2560.5" width="31" height="30.5"/>
+  <object id="364" x="9275.67" y="2238.67" width="63.3333" height="96.6667"/>
+  <object id="366" x="8991" y="2172" width="186" height="64"/>
+  <object id="367" x="8988" y="2020" width="165.333" height="26"/>
+  <object id="376" x="10940" y="2207.5" width="125" height="159.5"/>
+  <object id="377" x="10940" y="2367" width="33" height="416"/>
+  <object id="435" x="8363" y="2654" width="100" height="98"/>
+  <object id="436" x="8606.33" y="2656" width="93.3333" height="96"/>
+  <object id="453" x="12253.7" y="2369.33" width="160" height="32"/>
+  <object id="454" x="12253.7" y="2233.33" width="160" height="32"/>
+  <object id="455" x="12253.7" y="2107.33" width="160" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ff5500" name="hint">
+  <object id="107" x="111" y="2036" width="222" height="97">
+   <properties>
+    <property name="knowledge" value="0"/>
+   </properties>
+  </object>
+  <object id="108" x="654" y="2004" width="192" height="91">
+   <properties>
+    <property name="knowledge" value="1"/>
+   </properties>
+  </object>
+  <object id="109" x="1200" y="2038" width="222" height="63">
+   <properties>
+    <property name="knowledge" value="2"/>
+   </properties>
+  </object>
+  <object id="110" x="2065" y="1813" width="287" height="61">
+   <properties>
+    <property name="knowledge" value="3"/>
+   </properties>
+  </object>
+  <object id="112" x="3249" y="1909" width="224" height="62">
+   <properties>
+    <property name="knowledge" value="5"/>
+   </properties>
+  </object>
+  <object id="113" x="3632" y="1973" width="224" height="62">
+   <properties>
+    <property name="knowledge" value="6"/>
+   </properties>
+  </object>
+  <object id="168" x="12728" y="366" width="254" height="64">
+   <properties>
+    <property name="knowledge" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="178" x="12624.8" y="1066.06" width="257.333" height="66.6667">
+   <properties>
+    <property name="knowledge" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="295" x="9251.67" y="1939.33" width="190.667" height="64">
+   <properties>
+    <property name="knowledge" value="9"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ffffff" name="joe">
+  <object id="99" x="8726.78" y="2339.43" width="32" height="34"/>
+ </objectgroup>
+ <objectgroup color="#55ff7f" name="dialog">
+  <object id="348" x="7819.91" y="2562.36" width="278" height="81.6667">
+   <properties>
+    <property name="dialog" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="spike">
+  <object id="100" x="2287" y="2163" width="31" height="31"/>
+  <object id="101" x="2351" y="2164" width="32" height="29"/>
+  <object id="102" x="2448" y="2164" width="31" height="30"/>
+  <object id="103" x="2544" y="2165" width="32" height="28"/>
+  <object id="104" x="2608" y="2163" width="30" height="29"/>
+  <object id="105" x="2833" y="2099" width="30" height="30"/>
+  <object id="106" x="3024" y="2100" width="30" height="31"/>
+  <object id="188" x="125.5" y="1743.12" width="32" height="34"/>
+  <object id="189" x="158.2" y="1743.79" width="31.3333" height="32.6667"/>
+  <object id="190" x="190.2" y="1745.12" width="31.3333" height="31.3333"/>
+  <object id="191" x="222.2" y="1744.45" width="30.6667" height="32"/>
+  <object id="192" x="253.5" y="1743.79" width="32" height="33.3333"/>
+  <object id="193" x="285.5" y="1743.79" width="31.3333" height="32.6667"/>
+  <object id="352" x="10204" y="2720" width="31" height="31"/>
+  <object id="353" x="10268.5" y="2720" width="32" height="30.5"/>
+  <object id="354" x="10333" y="2719.5" width="30.5" height="31"/>
+  <object id="355" x="10397" y="2719.5" width="31.5" height="30.5"/>
+  <object id="356" x="10460.5" y="2719.5" width="31.5" height="31.5"/>
+  <object id="357" x="10524.5" y="2719" width="31.5" height="31.5"/>
+  <object id="359" x="10652.7" y="2718.5" width="30" height="31"/>
+  <object id="360" x="10716" y="2718.5" width="30.5" height="31.5"/>
+  <object id="361" x="10784.5" y="2719" width="31.5" height="32.5"/>
+  <object id="439" x="3587" y="2131" width="32" height="33"/>
+  <object id="440" x="3661" y="2132" width="32" height="33"/>
+  <object id="442" x="3737" y="2132" width="31" height="32"/>
+  <object id="443" x="3812" y="2131" width="30" height="33"/>
+  <object id="444" x="4143" y="2868" width="31" height="29"/>
+  <object id="445" x="4368" y="2933" width="30" height="31"/>
+  <object id="446" x="4688" y="2612" width="27" height="27"/>
+  <object id="447" x="4989" y="2066" width="33" height="31">
+   <properties>
+    <property name="direction" value="RIGHT"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#55007f" name="turret"/>
+ <objectgroup color="#00aa7f" name="moving_platform">
+  <object id="114" x="6061" y="2034" width="94" height="30">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" value="1"/>
+    <property name="up" value="14"/>
+    <property name="velocity" value="-5"/>
+   </properties>
+  </object>
+  <object id="131" x="10902" y="396" width="32" height="162">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" value="2"/>
+    <property name="up" value="2"/>
+    <property name="velocity" value="-5.5"/>
+   </properties>
+  </object>
+  <object id="132" x="10938" y="432" width="30" height="130">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" value="3"/>
+    <property name="up" value="4"/>
+    <property name="velocity" value="-6"/>
+   </properties>
+  </object>
+  <object id="133" x="10972" y="370" width="26" height="100">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" type="float" value="5"/>
+    <property name="up" type="float" value="4"/>
+    <property name="velocity" type="float" value="-7.5"/>
+   </properties>
+  </object>
+  <object id="134" x="11000" y="428" width="28" height="130">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" type="float" value="3"/>
+    <property name="up" type="float" value="4"/>
+    <property name="velocity" type="float" value="-6"/>
+   </properties>
+  </object>
+  <object id="135" x="11034" y="364" width="32" height="194">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" type="float" value="2"/>
+    <property name="up" value="5"/>
+    <property name="velocity" type="float" value="-8"/>
+   </properties>
+  </object>
+  <object id="137" x="11274" y="390.394" width="32" height="185" rotation="-30">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" type="float" value="5"/>
+    <property name="right" type="float" value="3"/>
+    <property name="velocity" type="float" value="7"/>
+   </properties>
+  </object>
+  <object id="138" x="11417" y="461" width="31" height="97">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" type="float" value="1"/>
+    <property name="up" type="float" value="3"/>
+    <property name="velocity" type="float" value="-6"/>
+   </properties>
+  </object>
+  <object id="139" x="11450" y="434" width="33" height="66" rotation="-34">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" type="float" value="6"/>
+    <property name="right" type="float" value="0"/>
+    <property name="velocity" type="float" value="8"/>
+   </properties>
+  </object>
+  <object id="140" x="11544" y="495" width="65" height="31">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" type="float" value="2"/>
+    <property name="up" type="float" value="2"/>
+    <property name="velocity" type="float" value="-5"/>
+   </properties>
+  </object>
+  <object id="141" x="11686" y="457" width="32" height="65" rotation="-30">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" type="float" value="7"/>
+    <property name="right" type="float" value="0"/>
+    <property name="velocity" type="float" value="6"/>
+   </properties>
+  </object>
+  <object id="142" x="11814" y="456" width="33" height="81" rotation="35">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" type="float" value="3"/>
+    <property name="right" type="float" value="4"/>
+    <property name="velocity" type="float" value="6.5"/>
+   </properties>
+  </object>
+  <object id="146" x="11897" y="430" width="64" height="161">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" type="float" value="0"/>
+    <property name="up" type="float" value="3.5"/>
+    <property name="velocity" type="float" value="-4"/>
+   </properties>
+  </object>
+  <object id="147" x="12007" y="423" width="34" height="63">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" type="float" value="5"/>
+    <property name="right" type="float" value="0"/>
+    <property name="velocity" type="float" value="24"/>
+   </properties>
+  </object>
+  <object id="148" x="12084" y="362" width="36" height="78" rotation="39">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" type="float" value="1"/>
+    <property name="right" type="float" value="5"/>
+    <property name="velocity" value="8"/>
+   </properties>
+  </object>
+  <object id="149" x="11994" y="398" width="62" height="32">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" type="float" value="5"/>
+    <property name="up" type="float" value="0"/>
+    <property name="velocity" type="float" value="-50"/>
+   </properties>
+  </object>
+  <object id="150" x="12184" y="430" width="66" height="162">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" type="float" value="0"/>
+    <property name="up" type="float" value="6"/>
+    <property name="velocity" type="float" value="-6"/>
+   </properties>
+  </object>
+  <object id="151" x="12288" y="508" width="31" height="63" rotation="-45">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" type="float" value="2"/>
+    <property name="right" type="float" value="4"/>
+    <property name="velocity" type="float" value="1"/>
+   </properties>
+  </object>
+  <object id="152" x="12292" y="430" width="34" height="68" rotation="35">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" type="float" value="1"/>
+    <property name="right" type="float" value="6"/>
+    <property name="velocity" type="float" value="3"/>
+   </properties>
+  </object>
+  <object id="171" x="12344" y="366" width="96" height="30">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" type="float" value="4"/>
+    <property name="right" type="float" value="3"/>
+    <property name="velocity" type="float" value="-4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#5555ff" name="death_indicator">
+  <object id="122" x="4044" y="2339" width="170" height="36"/>
+  <object id="431" x="19.0303" y="2422.45" width="3580.97" height="36.3636"/>
+  <object id="432" x="3086" y="3153" width="2734" height="32"/>
+  <object id="433" x="5837" y="2581" width="803" height="30"/>
+  <object id="434" x="11777.4" y="2942.12" width="1390.58" height="30"/>
+  <object id="451" x="6608" y="1493" width="30" height="1088"/>
+  <object id="452" x="11991.3" y="1486.67" width="1566.67" height="29.3333"/>
+ </objectgroup>
+ <objectgroup color="#aa5500" name="woomba">
+  <object id="123" x="5790" y="1763" width="32" height="32">
+   <properties>
+    <property name="left" value="23"/>
+    <property name="right" value="0"/>
+   </properties>
+  </object>
+  <object id="124" x="5704" y="1807" width="32" height="32">
+   <properties>
+    <property name="left" value="19"/>
+    <property name="right" value="2"/>
+   </properties>
+  </object>
+  <object id="125" x="5612" y="1851" width="32" height="32">
+   <properties>
+    <property name="left" value="17"/>
+    <property name="right" value="4"/>
+   </properties>
+  </object>
+  <object id="126" x="5480" y="1921" width="32" height="32">
+   <properties>
+    <property name="left" value="12"/>
+    <property name="right" value="8"/>
+   </properties>
+  </object>
+  <object id="241" x="8955" y="2719" width="32" height="33">
+   <properties>
+    <property name="delayLeft" type="float" value="3000"/>
+    <property name="delayRight" type="float" value="3000"/>
+    <property name="left" type="float" value="2"/>
+    <property name="right" type="float" value="2"/>
+   </properties>
+  </object>
+  <object id="249" x="9596" y="2719" width="32" height="32">
+   <properties>
+    <property name="left" type="float" value="3"/>
+    <property name="right" type="float" value="5.5"/>
+   </properties>
+  </object>
+  <object id="257" x="9647" y="2719.33" width="30" height="31.3333">
+   <properties>
+    <property name="left" type="float" value="2.5"/>
+    <property name="right" type="float" value="2.5"/>
+   </properties>
+  </object>
+  <object id="269" x="10077" y="2688" width="64" height="62.6667">
+   <properties>
+    <property name="left" type="float" value="0"/>
+    <property name="right" type="float" value="20"/>
+   </properties>
+  </object>
+  <object id="288" x="9218.66" y="2459.33" width="32" height="33.3333">
+   <properties>
+    <property name="left" value="1"/>
+    <property name="right" value="4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#aaffff" name="disappearing_platform">
+  <object id="169" x="12600" y="590" width="416" height="32">
+   <properties>
+    <property name="countdown" type="float" value="5000"/>
+   </properties>
+  </object>
+  <object id="289" x="9371.67" y="2017" width="62.6667" height="187"/>
+ </objectgroup>
+ <objectgroup color="#555500" name="cloud_indicator">
+  <object id="343" x="10168" y="368" width="30.6667" height="158.667"/>
+ </objectgroup>
+ <objectgroup name="cloud">
+  <object id="127" x="9941.33" y="244.666" width="160" height="92"/>
+ </objectgroup>
+ <objectgroup name="dragon">
+  <object id="167" x="13139" y="300.121" width="561" height="417"/>
+ </objectgroup>
+ <objectgroup name="traffic_light">
+  <object id="172" x="12952" y="462" width="33" height="101"/>
+ </objectgroup>
+ <objectgroup color="#0000ff" draworder="index" name="teleport">
+  <object id="179" x="12404.8" y="1228.06" width="64" height="65.3333">
+   <properties>
+    <property name="destinateX" type="float" value="453"/>
+    <property name="destinateY" type="float" value="117"/>
+   </properties>
+  </object>
+  <object id="180" x="13046.1" y="1231.39" width="62.6667" height="62.6667">
+   <properties>
+    <property name="destinateX" type="float" value="208"/>
+    <property name="destinateY" type="float" value="20"/>
+   </properties>
+  </object>
+  <object id="196" x="7421.76" y="2591.21" width="64" height="64">
+   <properties>
+    <property name="destinateX" type="float" value="-1"/>
+    <property name="destinateY" type="float" value="-1"/>
+    <property name="rodnyan" value="true"/>
+   </properties>
+  </object>
+  <object id="197" x="187.5" y="1319.79" width="66.6667" height="64">
+   <properties>
+    <property name="destinateX" type="float" value="-1"/>
+    <property name="destinateY" type="float" value="-1"/>
+   </properties>
+  </object>
+  <object id="351" x="10876" y="2397" width="61" height="65">
+   <properties>
+    <property name="destinateX" value="280"/>
+    <property name="destinateY" value="32"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="fake_blade"/>
+ <objectgroup color="#ffffff" name="panhandler">
+  <object id="221" x="7933" y="2688" width="63" height="62.6633">
+   <properties>
+    <property name="text" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#550000" name="beauteous_platform"/>
+ <objectgroup name="amphibian_indicator">
+  <object id="344" x="8671.5" y="2547.67" width="31.6667" height="31.3333"/>
+ </objectgroup>
+ <objectgroup color="#aa0000" name="amphibian">
+  <object id="274" x="8485.5" y="2659.83" width="92.17" height="92.1733"/>
+ </objectgroup>
+ <objectgroup color="#ffff00" name="collectible">
+  <object id="292" x="8811.34" y="2503" width="31.3333" height="31.3333">
+   <properties>
+    <property name="type" value="FISH"/>
+   </properties>
+  </object>
+  <object id="337" x="9115.33" y="2110.67" width="32" height="32">
+   <properties>
+    <property name="type" value="KEY"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="water_indicator">
+  <object id="346" x="8242.33" y="2624" width="25.3333" height="125.333"/>
+ </objectgroup>
+ <objectgroup color="#5500ff" name="water">
+  <object id="228" x="8220.5" y="2430.34" width="640" height="321.333"/>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="smash_platform">
+  <object id="233" x="8572" y="2189" width="31" height="100"/>
+  <object id="234" x="8604" y="2189" width="63" height="100"/>
+  <object id="235" x="8829" y="2189" width="30" height="91"/>
+ </objectgroup>
+ <objectgroup color="#00ff00" name="prequark">
+  <object id="95" x="3325" y="2063" width="31" height="31"/>
+  <object id="333" x="12317.6" y="2007.33" width="32" height="31.3333"/>
+  <object id="365" x="8220.33" y="2271.33" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ffff00" name="coin">
+  <object id="58" x="1312" y="2180" width="32" height="32"/>
+  <object id="59" x="1748" y="2184" width="23" height="22"/>
+  <object id="60" x="1857" y="2094" width="33" height="29"/>
+  <object id="61" x="1998" y="2014" width="28" height="31"/>
+  <object id="62" x="2652" y="2164" width="29" height="28"/>
+  <object id="63" x="2830" y="2036" width="30" height="32"/>
+  <object id="64" x="2928" y="2099" width="30" height="28"/>
+  <object id="65" x="3023" y="2037" width="32" height="30"/>
+  <object id="66" x="954" y="2228" width="18" height="26"/>
+  <object id="67" x="4346" y="2015" width="22" height="20"/>
+  <object id="68" x="4382" y="2015" width="20" height="20"/>
+  <object id="69" x="4344" y="1973" width="26" height="28"/>
+  <object id="70" x="4386" y="1975" width="24" height="22"/>
+  <object id="71" x="4442" y="1999" width="24" height="26"/>
+  <object id="72" x="4486" y="2039" width="26" height="26"/>
+  <object id="73" x="4522" y="2093" width="30" height="28"/>
+  <object id="74" x="4576" y="2141" width="28" height="28"/>
+  <object id="75" x="4630" y="2175" width="30" height="28"/>
+  <object id="76" x="4688" y="2197" width="28" height="24"/>
+  <object id="77" x="4750" y="2197" width="30" height="24"/>
+  <object id="78" x="4816" y="2197" width="30" height="24"/>
+  <object id="79" x="4326" y="2993" width="26" height="28"/>
+  <object id="80" x="4428" y="2895" width="26" height="28"/>
+  <object id="81" x="4524" y="2797" width="26" height="30"/>
+  <object id="82" x="4652" y="2645" width="26" height="28"/>
+  <object id="83" x="4720" y="2509" width="30" height="34"/>
+  <object id="84" x="4802" y="2433" width="28" height="26"/>
+  <object id="85" x="4870" y="2373" width="22" height="22"/>
+  <object id="86" x="4962" y="2257" width="30" height="28"/>
+  <object id="87" x="5094" y="2135" width="30" height="30"/>
+  <object id="88" x="5184" y="2091" width="26" height="26"/>
+  <object id="89" x="5274" y="2031" width="28" height="36"/>
+  <object id="90" x="5380" y="1977" width="24" height="32"/>
+  <object id="91" x="5492" y="1921" width="26" height="30"/>
+  <object id="92" x="5614" y="1853" width="30" height="30"/>
+  <object id="93" x="5736" y="1779" width="28" height="28"/>
+  <object id="94" x="5850" y="1767" width="32" height="28"/>
+  <object id="380" x="6582.67" y="527.333" width="32" height="32"/>
+  <object id="381" x="6935.33" y="464" width="32" height="32"/>
+  <object id="382" x="7190" y="560" width="32" height="32"/>
+  <object id="383" x="7478" y="431.333" width="32" height="32"/>
+  <object id="384" x="7767.33" y="446.667" width="32" height="32"/>
+  <object id="385" x="8054.67" y="560" width="32" height="32"/>
+  <object id="386" x="8504.67" y="495.333" width="32" height="32"/>
+  <object id="387" x="8887.33" y="559.333" width="32" height="32"/>
+  <object id="388" x="9303.33" y="464" width="32" height="32"/>
+  <object id="389" x="9720.67" y="496" width="32" height="32"/>
+  <object id="390" x="12629.6" y="748.727" width="32" height="32"/>
+  <object id="391" x="12724.3" y="750.061" width="32" height="32"/>
+  <object id="392" x="12823" y="751.394" width="32" height="32"/>
+  <object id="393" x="12920.3" y="751.394" width="32" height="32"/>
+  <object id="394" x="12919" y="878.061" width="32" height="32"/>
+  <object id="395" x="12821.6" y="879.394" width="32" height="32"/>
+  <object id="396" x="12721.6" y="878.061" width="32" height="32"/>
+  <object id="397" x="12629.6" y="876.727" width="32" height="32"/>
+  <object id="398" x="12631" y="1007.39" width="32" height="32"/>
+  <object id="399" x="12727" y="1007.39" width="32" height="32"/>
+  <object id="400" x="12824.3" y="1010.06" width="32" height="32"/>
+  <object id="401" x="12919" y="1007.39" width="32" height="32"/>
+  <object id="402" x="7388" y="2717" width="32" height="32"/>
+  <object id="403" x="7581" y="2657" width="32" height="32"/>
+  <object id="404" x="7676" y="2591" width="32" height="32"/>
+  <object id="405" x="7803" y="2464" width="32" height="32"/>
+  <object id="407" x="8733" y="2335" width="30" height="32"/>
+  <object id="408" x="8475" y="2336" width="33" height="30"/>
+  <object id="409" x="9070" y="2674" width="28" height="29"/>
+  <object id="410" x="9500" y="2558" width="32" height="31"/>
+  <object id="411" x="9689" y="2560" width="35" height="31"/>
+  <object id="412" x="9850" y="2558" width="33" height="33"/>
+  <object id="413" x="10300" y="2398" width="31" height="32"/>
+  <object id="414" x="9130" y="2415" width="33" height="33"/>
+  <object id="415" x="9231" y="2287" width="30" height="32"/>
+  <object id="416" x="9338" y="2176" width="31" height="29"/>
+  <object id="417" x="9020" y="2113" width="31" height="31"/>
+  <object id="418" x="9692" y="2173" width="30" height="32"/>
+  <object id="419" x="10076" y="2270" width="29" height="31"/>
+  <object id="420" x="10397" y="2176" width="30" height="30"/>
+  <object id="421" x="10524" y="2175" width="30" height="29"/>
+  <object id="422" x="10683" y="2175" width="32" height="31"/>
+  <object id="423" x="10619" y="2271" width="32" height="31"/>
+  <object id="424" x="10906" y="2173" width="35" height="32"/>
+  <object id="425" x="11209" y="2669" width="35" height="36"/>
+  <object id="426" x="11151" y="2387" width="25" height="27"/>
+  <object id="427" x="11644" y="2749" width="32" height="34"/>
+  <object id="428" x="12012" y="2735" width="29" height="33"/>
+  <object id="429" x="12113" y="2608" width="21" height="28"/>
+  <object id="430" x="12380" y="2591" width="31" height="32"/>
+  <object id="456" x="12320" y="2423" width="31" height="32"/>
+  <object id="457" x="12312" y="2291" width="31" height="32"/>
+  <object id="458" x="12316" y="2163" width="31" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="invisible_blade"/>
+ <objectgroup name="fake_platform">
+  <object id="256" x="9596.91" y="2622.73" width="31.9091" height="31.0909"/>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="shuriken">
+  <object id="264" x="10075.7" y="2477.33" width="24" height="24">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" type="float" value="6"/>
+    <property name="up" type="float" value="0"/>
+    <property name="velocity" type="float" value="-5.4"/>
+   </properties>
+  </object>
+  <object id="266" x="10164.5" y="2373.33" width="24" height="24">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" type="float" value="8"/>
+    <property name="up" type="float" value="0"/>
+    <property name="velocity" type="float" value="-6"/>
+   </properties>
+  </object>
+  <object id="278" x="9787.67" y="2398.67" width="24" height="24">
+   <properties>
+    <property name="direction" value="VERTICAL"/>
+    <property name="down" value="2"/>
+    <property name="up" value="4"/>
+    <property name="velocity" value="-6"/>
+   </properties>
+  </object>
+  <object id="280" x="9691.67" y="2462.67" width="24" height="24">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" value="6"/>
+    <property name="right" value="3.5"/>
+    <property name="velocity" value="6"/>
+   </properties>
+  </object>
+  <object id="285" x="9599.67" y="2350.33" width="24" height="24">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" value="4"/>
+    <property name="right" value="5.5"/>
+    <property name="velocity" value="6"/>
+   </properties>
+  </object>
+  <object id="287" x="9467.67" y="2462.67" width="24" height="24">
+   <properties>
+    <property name="direction" value="HORIZONTAL"/>
+    <property name="left" value="4.5"/>
+    <property name="right" value="3"/>
+    <property name="velocity" value="6"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#00ff00" name="transformable_platform">
+  <object id="273" x="8191" y="2558.67" width="32" height="95.3333">
+   <properties>
+    <property name="transformY" type="float" value="3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#55aa7f" name="gravity_anomaly">
+  <object id="275" x="8379.67" y="2464" width="64" height="188">
+   <properties>
+    <property name="anomalyX" type="float" value="0"/>
+    <property name="anomalyY" type="float" value="-8"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#555500" name="overlap">
+  <object id="258" x="9917" y="2334.67" width="62.6667" height="416"/>
+  <object id="272" x="10939.7" y="2207" width="126.667" height="576"/>
+  <object id="286" x="9275.67" y="2238.5" width="64.33" height="257"/>
+ </objectgroup>
+ <objectgroup color="#ff007f" name="jump_indicator"/>
+ <objectgroup name="octopus_indicator">
+  <object id="372" x="9114.5" y="2111.5" width="32.5" height="31.5">
+   <properties>
+    <property name="type" value="KEY"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="octopus">
+  <object id="374" x="9020" y="1856" width="60" height="60"/>
+ </objectgroup>
+ <objectgroup color="#ff55ff" name="sprite">
+  <object id="182" x="12467.5" y="1136.73" width="190.667" height="189.333">
+   <properties>
+    <property name="type" value="TANGELO"/>
+   </properties>
+  </object>
+  <object id="183" x="12851.5" y="1135.39" width="190.667" height="190.667">
+   <properties>
+    <property name="type" value="MACHAMP"/>
+   </properties>
+  </object>
+  <object id="294" x="8978.66" y="1860.67" width="158.67" height="161.333">
+   <properties>
+    <property name="type" value="LAIR"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="blade"/>
+</map>

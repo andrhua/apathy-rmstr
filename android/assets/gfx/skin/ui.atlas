@@ -1,0 +1,114 @@
+
+ui.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+loading-background
+  rotate: false
+  xy: 1952, 1504
+  size: 32, 32
+  split: 1, 1, 1, 1
+  pad: 15, 15, 6, 6
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+button-background
+  rotate: false
+  xy: 0, 210
+  size: 32, 32
+  split: 1, 1, 1, 1
+  pad: 15, 15, 6, 6
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+button-dialog-background
+  rotate: false
+  xy: 512, 694
+  size: 32, 32
+  split: 1, 1, 1, 1
+  pad: 15, 15, 6, 6
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+checkbox-off
+  rotate: false
+  xy: 1472, 1010
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+checkbox-on
+  rotate: false
+  xy: 992, 740
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+dialog-background
+  rotate: false
+  xy: 480, 480
+  size: 32, 32
+  split: 1, 1, 1, 1
+  pad: 15, 15, 6, 6
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+divider
+  rotate: false
+  xy: 992, 738
+  size: 6, 2
+  split: 2, 2, 0, 0
+  pad: 0, 0, 0, 0
+  orig: 6, 2
+  offset: 0, 0
+  index: -1
+locked
+  rotate: false
+  xy: 992, 1266
+  size: 480, 270
+  orig: 480, 270
+  offset: 0, 0
+  index: -1
+preview-0
+  rotate: false
+  xy: 512, 726
+  size: 480, 270
+  orig: 480, 270
+  offset: 0, 0
+  index: -1
+preview-1
+  rotate: false
+  xy: 992, 996
+  size: 480, 270
+  orig: 480, 270
+  offset: 0, 0
+  index: -1
+preview-2
+  rotate: false
+  xy: 1472, 1266
+  size: 480, 270
+  orig: 480, 270
+  offset: 0, 0
+  index: -1
+preview-3
+  rotate: false
+  xy: 512, 1266
+  size: 480, 270
+  orig: 480, 270
+  offset: 0, 0
+  index: -1
+preview-4
+  rotate: false
+  xy: 0, 242
+  size: 480, 270
+  orig: 480, 270
+  offset: 0, 0
+  index: -1
+preview-5
+  rotate: false
+  xy: 512, 996
+  size: 480, 270
+  orig: 480, 270
+  offset: 0, 0
+  index: -1
