@@ -1,7 +1,7 @@
 package polytech.mo.screens.interfaces;
 
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -10,10 +10,10 @@ import com.badlogic.gdx.scenes.scene2d.ui.Container;
 import com.badlogic.gdx.scenes.scene2d.ui.Dialog;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Stack;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
-import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
 import com.badlogic.gdx.scenes.scene2d.utils.ActorGestureListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.Align;
@@ -25,6 +25,7 @@ import polytech.mo.core.MyGame;
 import polytech.mo.game.levels.LevelBuilder;
 import polytech.mo.profile.Progress;
 import polytech.mo.screens.MenuScreen;
+import polytech.mo.ui.GradientSprite;
 import polytech.mo.ui.MyCheckBox;
 import polytech.mo.utils.Constants;
 
@@ -35,15 +36,17 @@ import static polytech.mo.ui.UIBuilder.initLabel;
 import static polytech.mo.ui.UIBuilder.initLevelPreview;
 import static polytech.mo.ui.UIBuilder.initTable;
 import static polytech.mo.ui.UIBuilder.initTextButton;
+import static polytech.mo.utils.Constants.ENTER_ANIMATION_DURATION;
+import static polytech.mo.utils.Constants.INTERSCREEN_PAD;
 
 public class MenuScreenInterface extends BaseInterface<MenuScreen>{
     private Dialog menuExitDialog;
     private Dialog settingsResetDialog;
-    public Table[] tables;
-    private Stack stack;
-    private VerticalGroup verticalGroup;
-    private Color color1, color2;
-    private Vector2 gradientVector;
+    private Table[] tables;
+    private Table screenTable;
+    private GradientSprite gradientSprite;
+    public boolean isNeedToMoveGradient, ifa;
+    private float elapsedTime;
 
     public MenuScreenInterface(MenuScreen screen) {
         super(screen);
@@ -52,9 +55,10 @@ public class MenuScreenInterface extends BaseInterface<MenuScreen>{
     @Override
     public void createStage() {
         loadGradient();
-        stack=new Stack();
+        Stack stack = new Stack();
         stack.setFillParent(true);
-        getStage().addActor(stack);
+        screenTable=new Table();
+        screenTable.defaults().width(width).height(height).padTop(INTERSCREEN_PAD*height/2).padBottom(INTERSCREEN_PAD*height/2);
         tables=new Table[MenuScreen.MenuState.values().length];
         for(int i=0; i<MenuScreen.MenuState.values().length; i++) {
             tables[i]=initTable();
@@ -64,10 +68,22 @@ public class MenuScreenInterface extends BaseInterface<MenuScreen>{
         initSettings();
         initIntro();
         initLevelSelector();
+
+        Stack thirdFloorStack = new Stack();
+        thirdFloorStack.setFillParent(true);
+        thirdFloorStack.add(tables[MenuScreen.MenuState.INTRO.ordinal()]);
+        thirdFloorStack.add(tables[MenuScreen.MenuState.LEVEL_SELECTOR.ordinal()]);
+
+        screenTable.add(thirdFloorStack).row();
+        screenTable.add(tables[MenuScreen.MenuState.START.ordinal()]).row();
+        screenTable.add(tables[MenuScreen.MenuState.SETTINGS.ordinal()]).row();
+        stack.add(screenTable);
+        getStage().addActor(stack);
     }
 
     private void initStart(){
         Image menuDivider = initImage("divider");
+        //Image dialogDivder=initImage("black-divider");
         Label menuLabel = initLabel("apathy", "logo");
         TextButton menuStartButton = initTextButton("start");
         menuStartButton.addListener(new ChangeListener() {
@@ -108,8 +124,6 @@ public class MenuScreenInterface extends BaseInterface<MenuScreen>{
         t.add(menuDivider).width(menuLabel.getWidth()).padBottom(20).row();
         t.add(buttonTable);
 
-        stack.add(t);
-
         menuExitDialog = new Dialog("", assets.get(Assets.uiSkin)){
             @Override
             protected void result(Object object) {
@@ -117,6 +131,8 @@ public class MenuScreenInterface extends BaseInterface<MenuScreen>{
             }
         };
         menuExitDialog.text(initLabel("exit-confirmation", "dialog"));
+        menuExitDialog.getContentTable().row();
+        //menuExitDialog.getContentTable().add(dialogDivder).width(450);
         menuExitDialog.getButtonTable().defaults().pad(40, 35, 40, 35);
         menuExitDialog.button(initTextButton("yes", "dialog"), true).button(initTextButton("no", "dialog"), false);
         menuExitDialog.setPosition(width/2-menuExitDialog.getPrefWidth()/2, height/2-menuExitDialog.getPrefHeight()/2);
@@ -184,8 +200,6 @@ public class MenuScreenInterface extends BaseInterface<MenuScreen>{
         t.add(settingsRussianButton).row();
         t.add(settingsBackButton).align(Align.bottomLeft).expand(true, false);
 
-        stack.add(t);
-
         settingsResetDialog=new Dialog("", assets.get(Assets.uiSkin)){
             @Override
             protected void result(Object object) {
@@ -248,29 +262,45 @@ public class MenuScreenInterface extends BaseInterface<MenuScreen>{
         t.add(deaths.get(5)).row();
         t.add().colspan(3).expandY().row();
         t.add(selectorBackButton).align(Align.bottomLeft).colspan(3).expand(false, false);
-
-        stack.add(t);
     }
 
-    protected void loadGradient(){
-        color1=assets.get(Assets.uiSkin).getColor("light-violet");
-        color2=assets.get(Assets.uiSkin).getColor("light-pink");
-        gradientVector=new Vector2();
+    @Override
+    public void update(float delta) {
+        super.update(delta);
+        if (isNeedToMoveGradient){
+            if (elapsedTime<= ENTER_ANIMATION_DURATION) {
+                gradientSprite.translate(0, (ifa?-1:1)*(delta/ENTER_ANIMATION_DURATION)*.5f*height);
+                elapsedTime += delta;
+            } else {
+                isNeedToMoveGradient=false;
+                elapsedTime=0;
+            }
+        }
+    }
+
+    private void loadGradient(){
+        isNeedToMoveGradient=false;
+        elapsedTime =0;
+        Color color1 = assets.get(Assets.uiSkin).getColor("light-violet");
+        Color color2 = assets.get(Assets.uiSkin).getColor("light-pink");
+        gradientSprite=new GradientSprite(new Texture("gfx/white-pixel.png"));
+        gradientSprite.setBounds(0, 0, width, height*2);
+        gradientSprite.setPosition(0, -.5f*height);
+        gradientSprite.setGradientColor(color1, color2, false);
     }
 
     @Override
     protected void drawBackground() {
-        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
-        shapeRenderer.rect(
-                gradientVector.x,
-                gradientVector.y,
-                width,
-                height*1.5f,
-                color2,
-                color2,
-                color1,
-                color1
-        );
-        shapeRenderer.end();
+        batch.begin();
+        gradientSprite.draw(batch);
+        batch.end();
+    }
+
+    public Table[] getTables() {
+        return tables;
+    }
+
+    public Table getScreenTable() {
+        return screenTable;
     }
 }

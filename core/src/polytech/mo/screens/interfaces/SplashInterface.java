@@ -28,11 +28,6 @@ public class SplashInterface extends BaseInterface<SplashScreen> {
     }
 
     @Override
-    protected void loadGradient() {
-
-    }
-
-    @Override
     protected void enterAnimation() {
 
     }

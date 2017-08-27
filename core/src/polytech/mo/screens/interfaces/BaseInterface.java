@@ -22,8 +22,7 @@ public abstract class BaseInterface<T extends BaseScreen> implements Renderable,
     private Stage stage;
     T screen;
     protected AssetManager assets;
-    protected SpriteBatch spriteBatch;
-    protected ShapeRenderer shapeRenderer;
+    protected SpriteBatch batch;
     protected Button[][] buttons;
     protected Vector2 selectedButton;
 
@@ -33,11 +32,9 @@ public abstract class BaseInterface<T extends BaseScreen> implements Renderable,
         assets=MyGame.getAssets().getManager();
         width= Constants.WIDTH;
         height=Constants.HEIGHT;
-        spriteBatch=new SpriteBatch();
-        spriteBatch.setProjectionMatrix(MyGame.getCamera().combined);
-        shapeRenderer=new ShapeRenderer();
-        shapeRenderer.setProjectionMatrix(MyGame.getCamera().combined);
-        stage =new Stage(MyGame.getViewport(), spriteBatch);
+        batch =new SpriteBatch();
+        batch.setProjectionMatrix(MyGame.getCamera().combined);
+        stage =new Stage(MyGame.getViewport(), batch);
         Gdx.input.setInputProcessor(stage);
         enterAnimation();
         createStage();
@@ -60,8 +57,7 @@ public abstract class BaseInterface<T extends BaseScreen> implements Renderable,
     @Override
     public void dispose() {
         stage.dispose();
-        spriteBatch.dispose();
-        shapeRenderer.dispose();
+        batch.dispose();
     }
 
     protected void enterAnimation(){

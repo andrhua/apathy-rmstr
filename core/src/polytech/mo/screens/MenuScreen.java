@@ -19,6 +19,7 @@ import polytech.mo.screens.interfaces.MenuScreenInterface;
 import polytech.mo.utils.Constants;
 
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
+import static polytech.mo.core.MyGame.getCamera;
 import static polytech.mo.core.MyGame.getSettings;
 
 public class MenuScreen extends BaseScreen<MenuScreenInterface> implements Resetable{
@@ -26,16 +27,14 @@ public class MenuScreen extends BaseScreen<MenuScreenInterface> implements Reset
     private MenuState menuState;
 
     private void setMenuState(MenuState menuState, boolean isForwardAnimation){
-        final Table quittingTable=UI.tables[this.menuState.ordinal()];
-        final Table enteringTable=UI.tables[menuState.ordinal()];
+        UI.isNeedToMoveGradient=true;
+        UI.ifa=isForwardAnimation;
+        final Table quittingTable=UI.getTables()[this.menuState.ordinal()];
+        Table enteringTable=UI.getTables()[menuState.ordinal()];
         Gdx.input.setInputProcessor(MyGame.getEmptyInputProccessor());
         enteringTable.setVisible(true);
-        quittingTable.addAction(
-                moveTo(0, (isForwardAnimation ? -1 : 1) * Constants.HEIGHT, Constants.EXIT_ANIMATION_DURATION, Interpolation.sineOut)
-        );
-        enteringTable.addAction(sequence(
-                moveTo(0, (isForwardAnimation ? 1 : -1) * Constants.HEIGHT),
-                moveTo(0, 0, Constants.ENTER_ANIMATION_DURATION, Interpolation.sineOut),
+        UI.getScreenTable().addAction(sequence(
+                moveBy(0, (isForwardAnimation?-1:1)*(1+Constants.INTERSCREEN_PAD)*Constants.HEIGHT, Constants.ENTER_ANIMATION_DURATION, Interpolation.exp5),
                 run(new Runnable() {
                     @Override
                     public void run() {
@@ -55,7 +54,7 @@ public class MenuScreen extends BaseScreen<MenuScreenInterface> implements Reset
     public void show() {
         super.show();
         menuState=MenuState.START;
-        UI.tables[menuState.ordinal()].setVisible(true);
+        UI.getTables()[menuState.ordinal()].setVisible(true);
     }
 
     @Override
