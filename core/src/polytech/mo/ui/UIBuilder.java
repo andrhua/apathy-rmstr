@@ -2,6 +2,7 @@ package polytech.mo.ui;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.scenes.scene2d.ui.Container;
+import com.badlogic.gdx.scenes.scene2d.ui.Dialog;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
@@ -60,7 +61,7 @@ public class UIBuilder {
     }
 
     public static Container<Stack> initLevelPreview(Progress.Level level, ActorGestureListener listener){
-        Container<Stack>container=new Container<Stack>();
+        Container<Stack>container= new Container<>();
         Image levelPreview=new Image(uiSkin.getDrawable("preview-".concat(String.valueOf(level.getLevel().ordinal()))));
         String name=level.getLevel().name().toLowerCase();
         Stack stack=new Stack(levelPreview);
@@ -78,6 +79,14 @@ public class UIBuilder {
         }
 
         return container;
+    }
+
+    public static Table initTable(){
+        Table t=new Table();
+        t.setFillParent(true);
+        t.pad(Constants.TABLE_PAD);
+        t.setDebug(true);
+        return t;
     }
 
 }

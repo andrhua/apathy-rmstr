@@ -9,7 +9,7 @@ import com.badlogic.gdx.math.Vector3;
 
 import polytech.mo.assets.Assets;
 import polytech.mo.core.MyGame;
-import polytech.mo.game.objects.Updatable;
+import polytech.mo.core.Updatable;
 import polytech.mo.screens.interfaces.BaseInterface;
 import polytech.mo.screens.interfaces.Interfacable;
 
@@ -18,7 +18,7 @@ public abstract class BaseScreen<T extends BaseInterface> extends ScreenAdapter 
     protected Assets assets;
     protected MyGame game;
 
-    public BaseScreen(MyGame game, Object... args) {
+    public BaseScreen(MyGame game) {
         this.game=game;
         assets= MyGame.getAssets();
     }
@@ -49,13 +49,13 @@ public abstract class BaseScreen<T extends BaseInterface> extends ScreenAdapter 
         UI.update(delta);
     }
 
-    public void switchScreen(final MyGame.ScreenType screen, boolean isForwardExit){
+    public void switchScreen(final MyGame.ScreenType screen){
         UI.exitAnimation(new Runnable() {
             @Override
             public void run() {
                 game.switchScreen(screen);
             }
-        }, isForwardExit);
+        });
     }
 
     @Override
@@ -71,8 +71,6 @@ public abstract class BaseScreen<T extends BaseInterface> extends ScreenAdapter 
     @Override
     public boolean keyDown(int keycode) {
         return false;
-
-
     }
 
     @Override

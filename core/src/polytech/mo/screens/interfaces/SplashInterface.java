@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.actions.ColorAction;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Align;
 
 import polytech.mo.screens.BaseScreen;
@@ -13,14 +14,16 @@ import polytech.mo.screens.SplashScreen;
 
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.delay;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.fadeOut;
+import static com.badlogic.gdx.scenes.scene2d.actions.Actions.forever;
+import static com.badlogic.gdx.scenes.scene2d.actions.Actions.rotateBy;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.sequence;
 
 public class SplashInterface extends BaseInterface<SplashScreen> {
-    private Image logoImage;
     private boolean isActionAdded;
+    private Table table;
 
     public SplashInterface(SplashScreen screen) {
-        super(screen, false);
+        super(screen);
         isActionAdded=false;
     }
 
@@ -42,11 +45,14 @@ public class SplashInterface extends BaseInterface<SplashScreen> {
 
     @Override
     public void createStage() {
-        Texture texture=new Texture("gfx/logo.png");
-        texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        logoImage =new Image(texture);
-        table.defaults().width(200).height(200);
-        table.add(logoImage).align(Align.center);
+        table=new Table();
+        table.setFillParent(true);
+        getStage().addActor(table);
+        Texture logo=new Texture("gfx/logo.png");
+        logo.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        Image logoImage =new Image(logo);
+        table.defaults().align(Align.center);
+        table.add(logoImage).width(200).height(200);
     }
 
     @Override
@@ -54,7 +60,7 @@ public class SplashInterface extends BaseInterface<SplashScreen> {
         super.update(delta);
         if (screen.isAssetsLoaded())
             if (!isActionAdded) {
-                logoImage.addAction(fadeOut(.7f));
+                table.addAction(fadeOut(.7f));
                 isActionAdded = true;
             }
     }

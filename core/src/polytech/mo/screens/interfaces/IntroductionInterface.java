@@ -3,6 +3,7 @@ package polytech.mo.screens.interfaces;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ActorGestureListener;
 import com.badlogic.gdx.utils.Align;
 
@@ -20,9 +21,10 @@ public class IntroductionInterface extends BaseInterface {
     public IntroductionScreen.State state;
     private Label epigraphLabel, determinationLabel;
     private ActorGestureListener listener;
+    private Table table;
 
     public IntroductionInterface(BaseScreen screen) {
-        super(screen, true);
+        super(screen);
     }
 
     @Override

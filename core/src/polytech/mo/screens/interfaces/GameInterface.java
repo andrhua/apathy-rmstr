@@ -11,7 +11,7 @@ public class GameInterface extends BaseInterface<GameScreen>{
     private Camera camera;
 
     public GameInterface(GameScreen screen) {
-        super(screen, true);
+        super(screen);
         camera=new OrthographicCamera(Constants.CAMERA_WIDTH, Constants.CAMERA_HEIGHT);
         camera.translate(camera.viewportWidth/2, camera.viewportHeight/2, 0);
         camera.update();

@@ -31,21 +31,21 @@ public class Assets {
         initManager();
     }
 
-    private void initManager(){
+    public void initManager(){
         manager =new AssetManager(new InternalFileHandleResolver());
 
-        uiSkin=new AssetDescriptor<Skin>("gfx/skin/ui.json", Skin.class);
+        uiSkin= new AssetDescriptor<>("gfx/skin/ui.json", Skin.class);
         initFonts();
-        ObjectMap<String, Object> fontMap = new ObjectMap<String, Object>();
+        ObjectMap<String, Object> fontMap = new ObjectMap<>();
         fontMap.put("main-regular", mainRegularFont);
         fontMap.put("main-preview", mainPreviewFont);
         fontMap.put("main-dialog", mainDialogFont);
         fontMap.put("main-logo", mainLogoFont);
         SkinLoader.SkinParameter parameter = new SkinLoader.SkinParameter(fontMap);
 
-        positiveClick=new AssetDescriptor<Sound>("audio/click-positive.mp3", Sound.class);
-        negativeClick=new AssetDescriptor<Sound>("audio/click-negative.wav", Sound.class);
-        music=new AssetDescriptor<Music>("audio/music.mp3", Music.class);
+        positiveClick= new AssetDescriptor<>("audio/click-positive.mp3", Sound.class);
+        negativeClick= new AssetDescriptor<>("audio/click-negative.wav", Sound.class);
+        music= new AssetDescriptor<>("audio/music.mp3", Music.class);
 
         manager.load(uiSkin.fileName, Skin.class, parameter);
         manager.load(positiveClick);
@@ -61,7 +61,6 @@ public class Assets {
         parameter.characters="абвгдежзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyzАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789][_!$%#@|\\/?-+=()*&.;:,{}\"´`'<>";
         parameter.size= Constants.FONT_REGULAR;
         mainRegularFont =generator.generateFont(parameter);
-        float scale=(float)Constants.DEVICE_HEIGHT/Constants.HEIGHT;
         mainRegularFont.setUseIntegerPositions(false);
 
         parameter.size=Constants.FONT_LOGO;

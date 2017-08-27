@@ -28,20 +28,20 @@ public class SplashScreen extends BaseScreen<SplashInterface>{
     @Override
     public void update(float delta) {
         super.update(delta);
-        if (assets.getManager().update()&&!isAssetsLoaded) {
+        if (assets.getManager().update() && !isAssetsLoaded) {
             MyGame.setSettings(new Settings());
             MyGame.setProgress(new Progress());
             new SFX(assets.getManager());
             new Music();
             new I18n();
             new UIBuilder(assets.getManager());
-            isAssetsLoaded =true;
+            isAssetsLoaded = true;
             assets.setState(Assets.State.LOADED);
             MyGame.setMusic(new Music());
             Timer.schedule(new Timer.Task() {
                 @Override
                 public void run() {
-                    game.switchScreen(MyGame.ScreenType.START);
+                    game.switchScreen(MyGame.ScreenType.MENU);
                 }
             }, 1);
         }

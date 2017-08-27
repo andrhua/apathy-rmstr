@@ -8,7 +8,7 @@ public class Unpacker {
     public static void main(String...args){
         TextureUnpacker unpacker =new TextureUnpacker();
         unpacker.splitAtlas(new TextureAtlas.TextureAtlasData(
-                        new FileHandle("in/backgrounds.atlas"),
+                        new FileHandle("in/game_objects.atlas"),
                         new FileHandle("in"),
                         false
                 ),

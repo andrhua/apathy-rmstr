@@ -17,7 +17,7 @@ public class Settings extends BasePlayerData{
         preferences = Gdx.app.getPreferences(PREFERENCES);
         isSfxEnabled=true;
         isMusicEnabled=true;
-        isIntroduced=false;
+        isIntroduced=true;
         language= Locale.getDefault().toString().contains("ru")? I18n.Language.RU : I18n.Language.EN;
         read();
     }

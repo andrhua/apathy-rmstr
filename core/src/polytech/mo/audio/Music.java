@@ -1,7 +1,7 @@
 package polytech.mo.audio;
 
 import polytech.mo.assets.Assets;
-import polytech.mo.game.objects.Updatable;
+import polytech.mo.core.Updatable;
 
 import static polytech.mo.core.MyGame.getAssets;
 import static polytech.mo.core.MyGame.getSettings;

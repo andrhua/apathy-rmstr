@@ -3,39 +3,34 @@ package polytech.mo.core;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputAdapter;
-import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Timer;
-import com.badlogic.gdx.utils.async.AsyncExecutor;
-import com.badlogic.gdx.utils.async.AsyncTask;
 import com.badlogic.gdx.utils.viewport.FitViewport;
-
-import java.util.HashMap;
 
 import polytech.mo.assets.Assets;
 import polytech.mo.audio.Music;
 import polytech.mo.profile.Progress;
 import polytech.mo.profile.Settings;
-import polytech.mo.screens.AboutScreen;
 import polytech.mo.screens.BaseScreen;
 import polytech.mo.screens.GameScreen;
-import polytech.mo.screens.IntroductionScreen;
-import polytech.mo.screens.LevelSelectorScreen;
-import polytech.mo.screens.SettingsScreen;
+import polytech.mo.screens.MenuScreen;
 import polytech.mo.screens.SplashScreen;
-import polytech.mo.screens.StartMenuScreen;
 import polytech.mo.utils.Constants;
+
+import static polytech.mo.utils.Constants.GAME_CAMERA_HEIGHT;
+import static polytech.mo.utils.Constants.GAME_CAMERA_WIDTH;
+import static polytech.mo.utils.Constants.HEIGHT;
+import static polytech.mo.utils.Constants.WIDTH;
 
 public class MyGame extends Game {
     private static Music music;
 	private static Assets assets;
 	private static Settings settings;
 	private static Progress progress;
-	private static Camera camera;
+	private static OrthographicCamera camera, gameCamera;
 	private static FitViewport viewport;
 	private static InputAdapter emptyInputProccessor;
-	public enum ScreenType {SPLASH, START, SETTINGS, ABOUT, INTRODUCTION, LEVEL_SELECTOR, GAME}
+	public enum ScreenType {SPLASH, MENU, GAME}
 	private ScreenType currentScreenType;
 
 	@Override
@@ -44,10 +39,11 @@ public class MyGame extends Game {
 		emptyInputProccessor=new InputAdapter();
 		new Constants();
 		camera = new OrthographicCamera();
-		viewport = new FitViewport(Constants.WIDTH, Constants.HEIGHT, camera);
+		viewport = new FitViewport(WIDTH, HEIGHT, camera);
 		viewport.apply();
 		camera.translate(viewport.getWorldWidth() / 2, viewport.getWorldHeight() / 2, 0);
 		camera.update();
+		gameCamera=new OrthographicCamera(GAME_CAMERA_WIDTH, GAME_CAMERA_HEIGHT);
 		assets=new Assets();
 		switchScreen(ScreenType.SPLASH);
 	}
@@ -63,13 +59,10 @@ public class MyGame extends Game {
 		Gdx.app.log("screen", screenType.name());
 		BaseScreen tmp=null;
 		switch (screenType) {
+			case MENU:tmp=new MenuScreen(this); break;
 			case GAME:tmp = new GameScreen(this);break;
 			case SPLASH:tmp = new SplashScreen(this);break;
-			case START:tmp = new StartMenuScreen(this, currentScreenType!=ScreenType.LEVEL_SELECTOR);break;
-			case SETTINGS:tmp = new SettingsScreen(this);break;
-			case ABOUT: tmp=new AboutScreen(this); break;
-			case INTRODUCTION: tmp=new IntroductionScreen(this); break;
-			case LEVEL_SELECTOR: tmp=new LevelSelectorScreen(this, currentScreenType==ScreenType.START); break;
+
 		}
 		currentScreenType=screenType;
 		setScreen(tmp);
@@ -104,7 +97,9 @@ public class MyGame extends Game {
 		return viewport;
 	}
 
-	public static Camera getCamera(){ return camera;}
+	public static OrthographicCamera getCamera(){ return camera;}
+
+	public static OrthographicCamera getGameCamera(){return gameCamera;}
 
 	public static Assets getAssets() {
 		return assets;

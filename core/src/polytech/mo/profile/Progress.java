@@ -8,7 +8,7 @@ public class Progress extends BasePlayerData {
     private Array<Level> levels;
 
     public Progress(){
-        levels=new Array<Level>(6);
+        levels= new Array<>(6);
         for (int i=0; i<6; i++){
             levels.add(new Level(LevelBuilder.Level.values()[i]));
         }
